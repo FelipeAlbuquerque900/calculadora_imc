@@ -14,3 +14,18 @@ def classificar_imc(imc):
         return "Obesidade grau 2"
     else:
         return "Obesidade grau 3"
+    
+def main():
+    print("=== Calculadora de IMC ===")
+    nome = input("Digite seu nome: ")
+    peso = float(input("Digite seu peso (kg): "))
+    altura = float(input("Digite sua altura (m): "))
+
+    imc = calcular_imc(peso, altura)
+    categoria = classificar_imc(imc)
+
+    print(f"\n{nome}, seu IMC é {imc:.2f}.")
+    print(f"Classificação: {categoria}")
+
+if __name__ == "__main__":
+    main()
